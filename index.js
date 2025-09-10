@@ -4,10 +4,8 @@ const socketIo = require('socket.io');
 const session = require('express-session');
 const fs = require('fs');
 const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
-require('dotenv').config();
 
 const app = express();
 const server = http.createServer(app);
@@ -34,21 +32,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Passport Configuration
-passport.use(new GoogleStrategy({
-    clientID: process.env.GOOGLE_CLIENT_ID,
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "/auth/google/callback"
-  },
-  (accessToken, refreshToken, profile, done) => {
-    const googleId = `google-${profile.id}`;
-    if (!db.users[googleId]) {
-        db.users[googleId] = { id: googleId, username: profile.displayName, friends: [], friendRequests: [] };
-        fs.writeFileSync('database.json', JSON.stringify(db, null, 2));
-    }
-    return done(null, { ...db.users[googleId], id: googleId });
-  }
-));
-
 passport.use(new LocalStrategy(
     { usernameField: 'loginIdentifier' },
     async (loginIdentifier, password, done) => {
@@ -75,8 +58,6 @@ app.get('/', (req, res) => res.render('index', { user: req.user, page: 'home' })
 app.get('/login', (req, res) => res.render('login', { user: req.user, page: 'login', error: req.session.messages ? req.session.messages.pop() : null }));
 app.get('/register', (req, res) => res.render('register', { user: req.user, page: 'register', error: null }));
 app.get('/chat', (req, res) => req.user ? res.render('chat', { user: req.user, page: 'chat' }) : res.redirect('/login'));
-app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
-app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), (req, res) => res.redirect('/chat'));
 
 // --- Socket.IO Logic ---
 io.on('connection', (socket) => {
@@ -175,7 +156,7 @@ io.on('connection', (socket) => {
     });
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 }).on('error', (err) => {
