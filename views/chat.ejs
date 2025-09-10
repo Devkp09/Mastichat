@@ -1,0 +1,57 @@
+<%- include('partials/header', { user: user, page: 'chat' }) %>
+<link rel="stylesheet" href="/css/chat.css">
+
+<div class="chat-container" data-user-id="<%= user.id %>" data-username="<%= user.username %>">
+    <!-- Left Sidebar for Users & Friends -->
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <h3>Online Users</h3>
+            <ul id="online-users-list" class="user-list"></ul>
+        </div>
+        <div class="sidebar-section">
+            <h3>Friend Requests</h3>
+            <ul id="friend-requests-list" class="user-list"></ul>
+        </div>
+        <div class="sidebar-section">
+            <h3>My Friends</h3>
+            <ul id="friends-list" class="user-list"></ul>
+        </div>
+    </div>
+
+    <!-- Main Chat Area -->
+    <div class="chat-area">
+        <div id="chat-window">
+            <div class="chat-header">
+                <h2 id="chat-with-username">Select a friend to chat</h2>
+            </div>
+            <div id="chat-box">
+                <div class="no-chat-selected">
+                    <p>Welcome to MastiChat, <%= user.username %>!</p>
+                    <p>Select a friend from your list to start a conversation.</p>
+                </div>
+            </div>
+            <form id="chat-form" class="chat-input-area">
+                <input id="message" autocomplete="off" placeholder="Type a message..." disabled />
+                <button type="submit" disabled>Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Right Sidebar for User Profile -->
+    <div class="profile-sidebar">
+        <div class="profile-card">
+            <h3>My Profile</h3>
+            <div class="profile-info">
+                <p><strong>Username:</strong></p>
+                <p class="username-display"><%= user.username %></p>
+                <p><strong>Number:</strong></p>
+                <p class="number-display"><%= user.id %></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/chat.js"></script>
+
+<%- include('partials/footer') %>

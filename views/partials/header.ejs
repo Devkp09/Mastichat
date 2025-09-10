@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MastiChat</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">MastiChat</a>
+            <ul>
+                <% if (user) { %>
+                    <li><a href="/chat" <% if (page === 'chat') { %>class="active"<% } %>>Chat</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                <% } else { %>
+                     <li><a href="/" <% if (page === 'home') { %>class="active"<% } %>>Home</a></li>
+                    <li><a href="/login" <% if (page === 'login') { %>class="active"<% } %>>Login</a></li>
+                    <li><a href="/register" <% if (page === 'register') { %>class="active"<% } %>>Register</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">

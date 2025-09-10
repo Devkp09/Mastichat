@@ -1,9 +1,58 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="/styles.css" />
-</head>
-<body>
-    <h1>Hello world</h1>
-</body>
-</html>
+<%- include('partials/header', { user: user, page: page }) %>
+
+<main class="homepage">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to MastiChat!</h1>
+                <p class="hero-subtitle">The seamless, real-time solution for connecting with friends and making new ones. Instantly, securely, and beautifully.</p>
+                <% if (user) { %>
+                    <a href="/chat" class="cta-button">Go to Chat</a>
+                <% } else { %>
+                    <a href="/register" class="cta-button">Get Started for Free</a>
+                    <a href="/login" class="secondary-button">Already have an account? Login</a>
+                <% } %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why You'll Love MastiChat</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-users"></i>
+                    <h3>See Who's Online</h3>
+                    <p>Our real-time online user list lets you know exactly who is available to chat right now. Never miss a chance to connect.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Full Friend System</h3>
+                    <p>Send and receive friend requests with a single click. Build your network of friends and manage your connections easily.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-comments"></i>
+                    <h3>Private, Secure Chat</h3>
+                    <p>Enjoy one-on-one conversations in our beautifully designed chat interface. Your messages are private and delivered instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="section-title">Ready to Join the Conversation?</h2>
+            <p>Signing up is fast and easy. Create your account and start chatting in minutes.</p>
+            <a href="/register" class="cta-button">Sign Up Now</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- Make sure to include Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<%- include('partials/footer') %>

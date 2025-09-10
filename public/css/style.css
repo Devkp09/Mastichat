@@ -1,0 +1,309 @@
+/* --- Base & Typography --- */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+header {
+    background: #ffffff;
+    color: #333;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+header a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #007bff;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+header ul a.active {
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* --- Homepage Redesign --- */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-button, .secondary-button {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 5px;
+    border: 2px solid transparent;
+}
+
+.hero .cta-button {
+    background: #ffffff;
+    color: #007bff;
+}
+
+.hero .cta-button:hover {
+    background: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.hero .secondary-button {
+    background: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+.hero .secondary-button:hover {
+     background: #ffffff;
+    color: #007bff;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    background: #fdfdfd;
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Final CTA Section */
+.final-cta {
+    background: #f4f7fa;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.final-cta .cta-button {
+    background: #007bff;
+    color: #ffffff;
+    border: 2px solid #007bff;
+}
+.final-cta .cta-button:hover {
+    background: #0056b3;
+    border-color: #0056b3;
+}
+
+/* --- General Form Styles --- */
+.form-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 420px;
+    margin: 50px auto;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Important for padding */
+}
+
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.google-btn {
+    background: #db4437;
+    margin-top: 20px;
+}
+
+.google-btn:hover {
+    background: #c33d2e;
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Friend Request Button Styles */
+.action-btn.resend {
+    background-color: #28a745; /* Green for resend */
+    color: white;
+}
+
+.action-btn.resend:hover {
+    background-color: #218838;
+}
+
+button[disabled] {
+    background-color: #6c757d; /* Gray for disabled/sent */
+    cursor: not-allowed;
+}
+
+
+/* --- Footer --- */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    header nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-content .cta-button, .hero-content .secondary-button {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    header nav {
+        padding: 0 10px;
+    }
+}

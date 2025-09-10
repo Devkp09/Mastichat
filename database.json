@@ -1,0 +1,138 @@
+{
+  "users": {
+    "8200718819": {
+      "username": "krishp_0900",
+      "password": "$2b$10$oZ8ORrL3wU8bswkVozy4KexjuNXBZmQQrKsSZyvdlc/WlE1XSbF6C",
+      "friends": [
+        "9510028404",
+        "9106862927"
+      ],
+      "friendRequests": []
+    },
+    "9510028404": {
+      "username": "krishp_090",
+      "password": "$2b$10$0HjXKVVMhCOm8fKI1EQufOCOfgNRX7HHiCfjx6E2oDzQersnl4h8y",
+      "friends": [
+        "9106862927",
+        "8200718819",
+        "9106862927"
+      ],
+      "friendRequests": []
+    },
+    "9106862927": {
+      "username": "krishp_09",
+      "password": "$2b$10$SsRird6IDP1hHFXZiAtz1uuaRhIvYMbFF1wVuxCB5TYmJLtdrjZ1q",
+      "friends": [
+        "9510028404",
+        "9510028404",
+        "8200718819"
+      ],
+      "friendRequests": []
+    },
+    "9904480038": {
+      "id": "9904480038",
+      "username": "ajay",
+      "password": "$2b$10$oLP6dJGZ4WMv4DwvT6cWEuPTrVpskVzalTjYvIc5IhKHQPM4plWqa",
+      "friends": [],
+      "friendRequests": []
+    }
+  },
+  "messages": {
+    "9106862927-9510028404": [
+      {
+        "text": "heloooooo",
+        "sender": "9510028404",
+        "receiver": "9106862927",
+        "timestamp": "2025-09-09T23:43:13.676Z"
+      },
+      {
+        "text": "hiiii",
+        "sender": "9106862927",
+        "receiver": "9510028404",
+        "timestamp": "2025-09-09T23:43:35.188Z"
+      },
+      {
+        "text": "jjjjj",
+        "sender": "9510028404",
+        "receiver": "9106862927",
+        "timestamp": "2025-09-10T00:10:13.168Z"
+      },
+      {
+        "text": "hiiiiiiii",
+        "sender": "9106862927",
+        "receiver": "9510028404",
+        "timestamp": "2025-09-10T01:08:14.081Z"
+      },
+      {
+        "text": "souund is not there",
+        "sender": "9510028404",
+        "receiver": "9106862927",
+        "timestamp": "2025-09-10T01:08:35.665Z"
+      },
+      {
+        "text": "hhh",
+        "sender": "9510028404",
+        "receiver": "9106862927",
+        "timestamp": "2025-09-10T01:12:05.860Z"
+      }
+    ],
+    "8200718819-9510028404": [
+      {
+        "text": "hi my rmd ",
+        "sender": "8200718819",
+        "receiver": "9510028404",
+        "timestamp": "2025-09-09T23:43:56.689Z"
+      },
+      {
+        "text": "❤️❤️❤️❤️",
+        "sender": "9510028404",
+        "receiver": "8200718819",
+        "timestamp": "2025-09-09T23:57:56.476Z"
+      },
+      {
+        "text": "hhhhh",
+        "sender": "9510028404",
+        "receiver": "8200718819",
+        "timestamp": "2025-09-10T00:29:30.980Z"
+      },
+      {
+        "text": "hiii",
+        "sender": "9510028404",
+        "receiver": "8200718819",
+        "timestamp": "2025-09-10T01:15:12.401Z"
+      },
+      {
+        "text": "hiii",
+        "sender": "8200718819",
+        "receiver": "9510028404",
+        "timestamp": "2025-09-10T01:15:36.502Z"
+      }
+    ],
+    "8200718819-9106862927": [
+      {
+        "text": "hhiii",
+        "sender": "9106862927",
+        "receiver": "8200718819",
+        "timestamp": "2025-09-10T00:09:02.129Z"
+      },
+      {
+        "text": "hiiii9",
+        "sender": "8200718819",
+        "receiver": "9106862927",
+        "timestamp": "2025-09-10T00:17:35.661Z"
+      },
+      {
+        "text": "hrrrrrrr",
+        "sender": "8200718819",
+        "receiver": "9106862927",
+        "timestamp": "2025-09-10T00:28:53.940Z"
+      },
+      {
+        "text": "heloooo",
+        "sender": "9106862927",
+        "receiver": "8200718819",
+        "timestamp": "2025-09-10T00:46:21.066Z"
+      }
+    ]
+  }
+}
